@@ -1,0 +1,46 @@
+{
+    "name": "hsinjuu/psr-http",
+    "description": "HTTP implementation for PSR standard.",
+    "keywords": ["php-http", "psr7", "psr-15", "psr-17"],
+    "homepage": "https://github.com/hsinjuu/psr-http",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hsinjuu",
+            "email": "hsinnn522@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "hsinjuu\\Psr7\\": "src/Psr7",
+            "hsinjuu\\Psr15\\": "src/Psr15",
+            "hsinjuu\\Psr17\\": "src/Psr17"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "hsinjuu\\Test\\Psr7\\": "tests/Psr7",
+            "hsinjuu\\Test\\Psr15\\": "tests/Psr15",
+            "hsinjuu\\Test\\Psr17\\": "tests/Psr17"
+        }
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "php vendor/phpunit/phpunit/phpunit"
+    }
+}
